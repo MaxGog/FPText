@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="FPText.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FPText"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <MenuBar Grid.Row="0" Background="Transparent">
+            <MenuBarItem x:Uid="File">
+                <MenuFlyoutItem Icon="OpenFile" x:Uid="Open" x:Name="Open" Click="Open_Click"/>
+                <MenuFlyoutItem Icon="Save" x:Uid="Save" x:Name="Save" Click="Save_Click"/>
+                <MenuFlyoutItem Icon="Save" x:Uid="SaveAS" x:Name="SaveAS" Click="SaveAS_Click"/>
+            </MenuBarItem>
+            <MenuBarItem x:Uid="Edit">
+                <MenuFlyoutItem Icon="Copy" x:Uid="Copy" x:Name="Copy" Click="Copy_Click"/>
+                <MenuFlyoutItem Icon="Paste" x:Uid="Paste" x:Name="Paste" Click="Paste_Click"/>
+                <MenuFlyoutItem Icon="Cut" x:Uid="Cut" x:Name="Cut" Click="Cut_Click"/>
+            </MenuBarItem>
+            <MenuBarItem x:Uid="FontSize">
+                <MenuFlyoutItem Text="12" Click="TwoTen_Click"/>
+                <MenuFlyoutItem Text="13" Click="ThreeTen_Click"/>
+                <MenuFlyoutItem Text="14" Click="FourTen_Click"/>
+                <MenuFlyoutItem Text="15" Click="FiveTen_Click"/>
+                <MenuFlyoutItem Text="16" Click="SixTen_Click"/>
+                <MenuFlyoutItem Text="17" Click="SevenTen_Click"/>
+                <MenuFlyoutItem Text="18" Click="EightTen_Click"/>
+                <MenuFlyoutItem Text="19" Click="NineTen_Click"/>
+            </MenuBarItem>
+            <MenuBarItem x:Uid="Font" x:Name="FontItems">
+                <MenuFlyoutItem Text="Italic" Click="MenuFlyoutItem_Click"/>
+                <MenuFlyoutItem Text="Normal" Click="MenuFlyoutItem_Click_1"/>
+                <MenuFlyoutItem Text="Italic" Click="MenuFlyoutItem_Click"/>
+            </MenuBarItem>
+            <MenuBarItem x:Uid="As">
+                <MenuFlyoutItem x:Uid="AsT" x:Name="As" Click="As_Click"/>
+            </MenuBarItem>
+        </MenuBar>
+        <Grid x:Name="BoxEditorGrid" Grid.Row="1">
+            <TextBox x:Name="Editor" Background="{ThemeResource SystemControlAcrylicWindowBrush}" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" ScrollViewer.VerticalScrollBarVisibility="Auto" InputScope="Text"/>
+        </Grid>
+    </Grid>
+</Page>
